@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель - Добавление игры</title>
+    <meta name = "viewport"
+    content = "width=device-width, inital-scale=1.0">
+
+    <style> 
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(17, 17, 17);
+        color: rgb(43, 197, 40);
+        font-weight: bold;
+    }
+    .admin-container{
+     background-color: rgb(125, 125, 125);
+     border: 4px solid rgb(43, 197, 40);
+     border-radius: 70px;
+     overflow: hidden;
+     margin-left: 2%;
+     margin: 0 auto;
+     text-align: center;
+     padding: 5%;
+     width: 50%;
+    }
+    h1 {
+        font-size:xx-large;
+        margin-top: 0;
+    }
+    .form-group{
+     margin-left: 3%;
+     text-align: left;
+     padding: 5%;
+     width: 40%;
+     font-size: x-large;
+    }
+    input, select, textarea {
+     background-color: rgb(33, 33, 33);
+     border: 4px solid rgb(73, 73, 73);
+     color: rgb(146, 146, 146);
+     border-radius: 70px;
+     overflow: hidden;
+     text-align: left;
+     width: 100%;
+     padding: 5%;
+     font-size: large;
+     font-weight: bold;
+    }
+     input:focus, select:focus, textarea:focus{
+        outline: none;
+        box-shadow: 0 0 0 7px rgba(212, 211, 211, 0.585);
+     }
+    .add-btn{
+        background-color: rgb(82, 82, 82);
+     border: 4px solid rgb(37, 37, 37);
+     border-radius: 70px;
+     overflow: hidden;
+     margin-left: 2%;
+     margin: 0 auto;
+     text-align: center;
+     padding: 5%;
+     color:rgb(37, 37, 37);
+     width: 50%;
+     font-size: 200%;
+     font-weight: bold;
+
+    }
+     
+
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <h1><b>Добавить новую игру</b></h1>
+
+        <form id="addGameForm">
+            <!-- 6.1 Название -->
+            <div class="form-group">
+                <label>Название игры</label>
+                <input type="text" placeholder="Например: The Witcher 4" required>
+            </div>
+
+            <!-- 6.2 Жанр -->
+            <div class="form-group">
+                <label>Жанр</label>
+                <select required>
+                    <option value="">Выберите жанр</option>
+                    <option value="Action">Экшен</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Horror">Хоррор</option>
+                    <option value="Strategy">Стратегия</option>
+                </select>
+            </div>
+
+            <!-- 6.3 Изображение -->
+            <div class="form-group">
+                <label>Ссылка на изображение</label>
+                <input type="url" placeholder="https://image-link.com/img.jpg" required>
+            </div>
+
+            <!-- 6.4 Разработчик -->
+            <div class="form-group">
+                <label>Компания-разработчик</label>
+                <input type="text" placeholder="Rockstar Games" required>
+            </div>
+
+            <!-- 6.5 Описание -->
+            <div class="form-group">
+                <label>Описание</label>
+                <textarea placeholder="Краткое описание игры..."></textarea>
+            </div>
+
+            <!-- 6.6 Стоимость -->
+            <div class="form-group">
+                <label>Стоимость (руб.)</label>
+                <input type="number" placeholder="2000" required>
+            </div>
+
+            <!-- 6.7 Кнопка Добавить -->
+            <button type="submit" class="add-btn">Добавить игру</button>
+        </form>
+    </div>
+
+    <script>
+        // Простая проверка, чтобы кнопка что-то делала
+        document.getElementById('addGameForm').onsubmit = function(e) {
+            e.preventDefault(); // Чтобы страница не перезагружалась
+            alert("Игра успешно добавлена в базу данных!");
+            this.reset(); // Очистить форму
+        };
+    </script>
+
+</body>
+</html>
+
+</html>
