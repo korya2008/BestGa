@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    <meta charset="UTF-8">
+      <title>Регистрация</title>
+        <style>
+        body{
+            background-color: rgb(17,17,17);
+            min-height: 1800px;
+            position:relative;
+            margin:0;
+            padding-bottom: 200px;
+        }
+     .titles{
+      text-align: center;
+      font-size: 70px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      border: 4px solid rgb(31,30,30);
+      border-radius: 70px;
+      border-color: rgb(60, 105, 60);
+      margin: 0 auto;
+      width: 700px;
+      color: rgb(81,136,81);
+      margin-top: 6%;
+      } 
+      
+      .buttonauto{
+      text-align: left;
+      font-size: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      border: 4px solid rgb(31,30,30);
+      border-radius: 65px;
+      margin: 0 auto;
+      width: 450px;
+      color: rgb(47, 180, 47);
+      margin-top: 5%;
+      background-color: rgba(110, 110, 110, 0.512);
+      cursor: pointer;
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-right: 10px;
+      padding-bottom: 10px
+      }
+      .win{
+      text-align: left;
+      font-size: 35px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      border: 4px solid rgb(31,30,30);
+      border-radius:80px;
+      border-color: rgb(45, 165, 45);
+      margin: 0 auto;
+      width:870px;
+      color: rgb(47, 180, 47);
+      margin-top: 2%;
+      background-color: rgb(33, 33, 33);
+      cursor: pointer;
+      position:absolute;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      margin: 3% 20%;
+      }
+      .agree{
+      text-align: center;
+      font-size: 25px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: italic;
+      color: rgba(47, 180, 47, 0.667);
+      margin-top: 2%;
+      cursor: pointer;
+      position:absolute;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      margin: 3% 20%;
+      }
+      .checkbox{
+      height: 27px;
+      width: 27px;
+      accent-color: rgba(142, 244, 0, 0.697);
+      background-color: rgba(204, 192, 192, 0.767);
+      cursor: pointer;
+      }
+      .button_end{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        color:rgb(47, 180, 47);
+        background-color: rgba(255, 255, 255, 0.127);
+        border: 4px solid rgb(26, 124, 28);
+        border-radius: 80px;
+        font-weight: bold; 
+        width: 350px;
+        padding: 15px;
+        position: absolute;
+        top: 1300px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+      </style>
+    </head>
+    <body> 
+    <p class = "titles">Регистрация</p>
+ 
+    <div class ="win" ><label>E-mail:<input class = "buttonauto" type="email" name="email" required></label>
+         <p><label>Фамилия:<input class = "buttonauto" type="text" name = "surname" required></label></p>
+         <p><label>Имя:<input class = "buttonauto" type="text" name = "name" required></label></p>
+         <p><label>Дата рождения:<input class = "buttonauto" type="date" name = "birth_date" required></label></p>
+         <p><label>Номер телефона:<input class = "buttonauto" type="tel" name = "phone_number" required></label> </p>
+         <p><label>Пароль:<input class = "buttonauto" type="password" name = "password" autocomplete="new-password" required></label></p>
+         <p> <label>Повтор пароля:<input class = "buttonauto" type="password" name = "password" required></label></p>
+         <p class = "agree"><label>Я принимаю согласие на обработку персональных данных <input class = "checkbox" type="checkbox" name = "checkbox" required></label></p>
+    </div>
+    <p> <button class= "button_end" onclick="location.href = 'profile.html'" >Завершить регистрацию</button></p>
+    
+
+    
+    </body>
+</html>
